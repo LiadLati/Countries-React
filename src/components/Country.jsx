@@ -1,11 +1,9 @@
 import React from "react";
 
-const Country = ({flag, name, population, region, capital}) => {
+const Country = ({flag, name, population, region, capital, onclick}) => {
   return (
     // TODO: Country component
-    <>
-      <a href ="details.html"
-        className="country scale-effect countryDiv">
+    <div onClick={onclick}>
         <div className="country-flag">
           <img src={flag} alt={name}/>
         </div>
@@ -17,8 +15,7 @@ const Country = ({flag, name, population, region, capital}) => {
             <li><strong>capital: </strong>{capital}</li>
           </ul>
         </div>
-      </a>
-    </>
+    </div>
   );
 };
 
